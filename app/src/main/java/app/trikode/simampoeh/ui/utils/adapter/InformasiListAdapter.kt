@@ -3,9 +3,12 @@ package app.trikode.simampoeh.ui.utils.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import app.trikode.simampoeh.R
 import app.trikode.simampoeh.databinding.ItemListInformasiBinding
 import app.trikode.simampoeh.domain.model.informasi.Informasi
 import app.trikode.simampoeh.utils.click_listener.menu.InformasiClickListener
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class InformasiListAdapter : RecyclerView.Adapter<InformasiListAdapter.ViewHolder>() {
 

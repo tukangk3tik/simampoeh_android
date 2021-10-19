@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import app.trikode.simampoeh.databinding.ItemListMenuAllBinding
 import app.trikode.simampoeh.domain.model.menu.Menu
 import app.trikode.simampoeh.utils.click_listener.menu.MenuClickListener
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class MenuAllListAdapter : RecyclerView.Adapter<MenuAllListAdapter.ViewHolder>() {
 

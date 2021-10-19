@@ -2,7 +2,9 @@ package app.trikode.simampoeh.ui.utils.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import app.trikode.simampoeh.R
 import app.trikode.simampoeh.databinding.ItemListStatusPengajuanBinding
 import app.trikode.simampoeh.domain.model.list_pengajuan.Pengajuan
 

@@ -1,11 +1,16 @@
 package app.trikode.simampoeh.ui.utils.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import app.trikode.simampoeh.R
 import app.trikode.simampoeh.databinding.ItemListUploadBerkasBinding
 import app.trikode.simampoeh.domain.model.upload_berkas.BerkasResponse
 import app.trikode.simampoeh.utils.click_listener.upload_berkas.UploadBerkasClickListener
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class UploadBerkasListAdapter : RecyclerView.Adapter<UploadBerkasListAdapter.ViewHolder>() {
 
