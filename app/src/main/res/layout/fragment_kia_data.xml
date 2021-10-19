@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.kia.tambah.form.DataKiaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/header_gradient"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:elevation="1dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/app_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/identitas_anak"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_left_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="50dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nomor_induk_kependudukan_nik"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_nik"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom"
+                    android:maxLength="16"
+                    android:inputType="number"
+                    android:drawableEnd="@drawable/ic_credit_card"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progressNik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/edt_nik"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nama_lengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nama_lengkap"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_nama"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom_disabled"
+                android:focusable="false"
+                android:inputType="text"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/tempat_lahir"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_tempat_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom_disabled"
+                android:focusable="false"
+                android:inputType="text"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/tanggal_lahir"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_tgl_kelahiran"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom_disabled"
+                android:focusable="false"
+                android:inputType="text"
+                android:drawableEnd="@drawable/ic_calendar"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/jenis_kelamin"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg_jenkel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp">
+
+                <RadioButton
+                    android:enabled="false"
+                    android:id="@+id/rb_laki"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    android:text="@string/laki_laki" />
+
+                <RadioButton
+                    android:enabled="false"
+                    android:id="@+id/rb_perempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    android:text="@string/perempuan" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/agama"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_agama"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom_disabled"
+                android:focusable="false"
+                android:inputType="text"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nomor_akta_kelahiran"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_no_akta_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom"
+                android:inputType="text"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nama_ayah"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_nama_ayah"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom"
+                android:inputType="text"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nama_ibu"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlueDark"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_nama_ibu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="30dp"
+                android:padding="10dp"
+                android:background="@drawable/edt_text_custom"
+                android:inputType="text"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorVeryLightGray"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selanjutnya"
+                android:textColor="@color/colorBlue"
+                android:textSize="15sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

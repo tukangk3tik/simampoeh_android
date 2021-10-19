@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/navigation_beranda">
+
+    <fragment
+        android:id="@+id/navigation_beranda"
+        android:name="app.trikode.simampoeh.ui.beranda.BerandaFragment"
+        android:label="@string/beranda"
+        tools:layout="@layout/fragment_beranda" />
+
+    <fragment
+        android:id="@+id/navigation_pengajuan"
+        android:name="app.trikode.simampoeh.ui.pengajuan.PengajuanFragment"
+        android:label="@string/pengajuan"
+        tools:layout="@layout/fragment_pengajuan" />
+
+    <fragment
+        android:id="@+id/navigation_profil"
+        android:name="app.trikode.simampoeh.ui.profil.ProfilFragment"
+        android:label="@string/profil"
+        tools:layout="@layout/fragment_profil" />
+
+</navigation>

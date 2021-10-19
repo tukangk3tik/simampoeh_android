@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.general_form.tujuan_kirim.FormTujuanKirimFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/header_gradient"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/app_bar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/layanan_pengiriman"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="50dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/kirim_via_pos"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="30dp"
+                android:text="@string/pengiriman_dengan_kantor_pos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorVeryLightGray"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="10dp"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:visibility="gone"
+                android:id="@+id/formulir_pos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/tujuan_pengiriman"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/provinsi"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_provinsi"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom_disabled"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:focusable="false"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/kabupaten_kota"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_kabupaten_kota"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom_disabled"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:focusable="false"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/kecamatan"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_kecamatan"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:focusable="false"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/kelurahan"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_kelurahan"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:focusable="false"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/alamat"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom"
+                    android:inputType="text|textMultiLine"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/kode_pos"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlueDark"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_kodepos"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="10dp"
+                    android:background="@drawable/edt_text_custom"
+                    android:inputType="text"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_area"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorVeryLightGray"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_left_accent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sebelumnya"
+            android:textColor="@color/colorOrange"
+            android:textSize="15sp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selanjutnya"
+            android:textColor="@color/colorBlue"
+            android:textSize="15sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

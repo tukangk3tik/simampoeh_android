@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SibisaApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryVariant">@color/colorBlueDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorBlueDark</item>
+        <item name="colorSecondaryVariant">@color/colorBlueDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.SibisaApp.ActionBar" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryVariant">@color/colorBlueDark</item>
+        <item name="android:textViewStyle">@style/NunitoTextViewStyle</item>
+    </style>
+
+    <style name="Theme.SibisaApp.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryVariant">@color/colorBlueDark</item>
+        <item name="android:textViewStyle">@style/NunitoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/NunitoButtonStyle</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="NunitoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+
+    <style name="NunitoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+
+    <style name="Theme.SibisaApp.SplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryVariant">@color/colorBlueDark</item>
+    </style>
+
+
+    <style name="ThemeOverlay.SibisaApp.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+
+    <style name="Theme.SibisaApp.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SibisaApp.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SibisaApp.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
