@@ -11,13 +11,14 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import app.trikode.simampoeh.R
 import app.trikode.simampoeh.databinding.ActivityMainNonLoginBinding
 import app.trikode.simampoeh.domain.model.informasi.Informasi
 import app.trikode.simampoeh.domain.model.menu.Menu
 import app.trikode.simampoeh.ui.cek_layanan.CekLayananActivity
+import app.trikode.simampoeh.ui.layanan_syarat.LayananSyaratActivity
 import app.trikode.simampoeh.ui.login.LoginActivity
+import app.trikode.simampoeh.ui.menu_lainnya.MenuLainnyaActivity
 import app.trikode.simampoeh.ui.utils.adapter.InformasiListAdapter
 import app.trikode.simampoeh.ui.utils.adapter.MenuGridAdapter
 import app.trikode.simampoeh.utils.click_listener.menu.InformasiClickListener
@@ -59,8 +60,8 @@ class MainNonLoginActivity : AppCompatActivity(), View.OnClickListener, MenuClic
 
         val informasiAdapter = InformasiListAdapter()
         informasiAdapter.listener = this
-        binding.rvInformasi.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rvInformasi.adapter = informasiAdapter
+//        binding.rvInformasi.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+//        binding.rvInformasi.adapter = informasiAdapter
 
         viewModel.listInformasi.observe(this, {
             if (it.isNotEmpty()){
@@ -93,8 +94,13 @@ class MainNonLoginActivity : AppCompatActivity(), View.OnClickListener, MenuClic
 
             if (destination != null) {
                 val mIntent = Intent(this, destination)
+                mIntent.putExtra(MenuLainnyaActivity.STATUS_ROUTING, "FALSE")
                 startActivity(mIntent)
             }
+        } else {
+            val mIntent = Intent(this, LayananSyaratActivity::class.java)
+            mIntent.putExtra(LayananSyaratActivity.LAYANAN, menu.urlString)
+            startActivity(mIntent)
         }
     }
 

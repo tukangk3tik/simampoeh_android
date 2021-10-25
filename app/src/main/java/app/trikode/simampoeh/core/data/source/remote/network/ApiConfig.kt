@@ -1,7 +1,7 @@
 package app.trikode.simampoeh.core.data.source.remote.network
 
 import android.content.Context
-import app.trikode.simampoeh.utils.general.StringConfig
+import app.trikode.simampoeh.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -22,7 +22,7 @@ object ApiConfig {
 
     fun provideApiService(context: Context): ApiService {
         val retrofit = Retrofit.Builder()
-            .baseUrl(StringConfig.BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(provideOkHttpClient(context))
             .build()

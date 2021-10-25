@@ -127,4 +127,12 @@ interface ApiService {
         @Field("request") request: String = "history_saya"
     ) : Response<JsonObject>
 
+    //GET TAGIHAN
+    @Headers("Accept: application/json")
+    @POST("Pelaporan2")
+    @FormUrlEncoded
+    suspend fun getTagihan(
+        @Field("request") request: String = "biaya",
+    ) : Response<JsonObject>
+
 }

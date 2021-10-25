@@ -96,29 +96,28 @@
             android:background="@drawable/btn_shape_no_fill"
             />
 
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="@string/informasi"-->
+<!--            android:textSize="15sp"-->
+<!--            />-->
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:text="@string/informasi"
-            android:textSize="15sp"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_informasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:scrollbars="none"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:listitem="@layout/item_list_informasi"
-            tools:itemCount="4"
-            />
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_informasi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:scrollbars="none"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--            tools:listitem="@layout/item_list_informasi"-->
+<!--            tools:itemCount="4"-->
+<!--            />-->
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

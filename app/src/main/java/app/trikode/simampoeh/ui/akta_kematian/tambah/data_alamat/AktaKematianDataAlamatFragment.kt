@@ -53,35 +53,35 @@ class AktaKematianDataAlamatFragment : Fragment(), View.OnClickListener {
         when(v.id) {
             binding.btnBack.id -> parentFragmentManager.popBackStack()
             binding.edtProvinsi.id -> {
-                GeneralUtils.activityResultLauncher(
-                    binding.root.context, "provinsi",
-                    "", "Pilih Provinsi", resultLauncher)
+                GeneralUtils.wilayahActivityResultLauncher(
+                    binding.root.context, "Pilih Provinsi", "provinsi",
+                    resultLauncher = resultLauncher)
             }
             binding.edtKabupatenKota.id -> {
                 if (idProvinsi == "") {
                     AlertDialogHelper.showAlertDialog("Pilih Provinsi lebih dulu", requireContext())
                 } else {
-                    GeneralUtils.activityResultLauncher(
-                        binding.root.context, "kabupaten",
-                        idProvinsi, "Pilih Kabupaten/Kota", resultLauncher)
+                    GeneralUtils.wilayahActivityResultLauncher(
+                        binding.root.context, "Pilih Kabupaten/Kota", "kabupaten",
+                        idProvinsi, resultLauncher = resultLauncher)
                 }
             }
             binding.edtKecamatan.id -> {
                 if (idKabupaten == "") {
                     AlertDialogHelper.showAlertDialog("Pilih Kabupaten/Kota lebih dulu", requireContext())
                 } else {
-                    GeneralUtils.activityResultLauncher(
-                        binding.root.context, "kecamatan",
-                        idKabupaten, "Pilih Kecamatan", resultLauncher)
+                    GeneralUtils.wilayahActivityResultLauncher(
+                        binding.root.context, "Pilih Kecamatan", "kecamatan",
+                        idProvinsi, idKabupaten, resultLauncher = resultLauncher)
                 }
             }
             binding.edtKelurahan.id -> {
                 if (idKecamatan == "") {
                     AlertDialogHelper.showAlertDialog("Pilih Kecamatan lebih dulu", requireContext())
                 } else {
-                    GeneralUtils.activityResultLauncher(
-                        binding.root.context, "kelurahan",
-                        idKecamatan, "Pilih Kelurahan", resultLauncher)
+                    GeneralUtils.wilayahActivityResultLauncher(
+                        binding.root.context, "Pilih Kelurahan", "kelurahan",
+                        idProvinsi, idKabupaten, idKecamatan, resultLauncher)
                 }
             }
             binding.btnNext.id -> {

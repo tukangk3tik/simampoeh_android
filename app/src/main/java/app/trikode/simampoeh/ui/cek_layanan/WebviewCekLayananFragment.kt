@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import app.trikode.simampoeh.databinding.FragmentWebviewCekLayananBinding
-import app.trikode.simampoeh.utils.general.StringConfig
+import app.trikode.simampoeh.BuildConfig
+import app.trikode.simampoeh.databinding.FragmentCekLayananWebviewBinding
 import java.util.*
 
 class WebviewCekLayananFragment : Fragment() {
 
-    private var _binding: FragmentWebviewCekLayananBinding? = null
+    private var _binding: FragmentCekLayananWebviewBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class WebviewCekLayananFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentWebviewCekLayananBinding.inflate(inflater, container, false)
+        _binding = FragmentCekLayananWebviewBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -30,7 +30,7 @@ class WebviewCekLayananFragment : Fragment() {
         val kode = arguments?.getString(KODE)?.uppercase(Locale.getDefault())
 
         if (nik != null && kode != null){
-            val url = "${StringConfig.STAGING_URL}webview_mobile/informasi-layanan-$nik-${kode}"
+            val url = "${BuildConfig.STAGING_URL}webview_mobile/informasi-layanan-$nik-${kode}"
             binding.wvCekLayanan.loadUrl(url)
         }
     }

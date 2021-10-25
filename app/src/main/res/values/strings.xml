@@ -214,11 +214,22 @@
     <string name="detail_layanan">Detail Layanan</string>
     <string name="kembali_ke_login">Kembali ke Login</string>
     <string name="kamu_tidak_memiliki_tagihan_apapun">Kamu tidak memiliki tagihan apapun</string>
+    <string name="syarat_layanan">Syarat Layanan</string>
+    <string name="label_no_sts">1280414240100000xxxxx</string>
+    <string name="layanan">Layanan</string>
 
     <string-array name="kembar">
         <item>Single</item>
         <item>Kembar Dua (2)</item>
         <item>Kembar Tiga (3)</item>
     </string-array>
+    <string name="title_activity_tagihan_detail">TagihanDetailActivity</string>
+    <string name="next">Next</string>
+    <string name="detail_tagihan">Detail Tagihan</string>
+    <string name="ayo_segera_selesaikan_pembayaran_kamu">Ayo, segera selesaikan pembayaran kamu</string>
+    <string name="nama_layanan">Nama Layanan</string>
+    <string name="silahkan_bayar_biaya_pengiriman_melalui_bank_sumut_yaitu_melalui_mobile_banking_atm_dan_teller">Silahkan bayar biaya pengiriman melalui Bank Sumut yaitu melalui Mobile Banking, ATM, dan Teller</string>
+    <string name="kode_pembayaran">Kode Pembayaran</string>
+    <string name="batas_waktu_pembayaran">Batas waktu pembayaran</string>
 
 </resources>

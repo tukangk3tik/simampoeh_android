@@ -23,7 +23,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.trikode.simampoeh.R
 import app.trikode.simampoeh.core.ui.ViewModelFactory
-import app.trikode.simampoeh.databinding.FragmentFormUploadBerkasBinding
+import app.trikode.simampoeh.databinding.FragmentGeneralFormUploadBerkasBinding
 import app.trikode.simampoeh.databinding.ProgressLayoutDarkBinding
 import app.trikode.simampoeh.domain.model.upload_berkas.BerkasResponse
 import app.trikode.simampoeh.ui.general_form.FormViewModel
@@ -44,7 +44,7 @@ import java.io.File
  */
 class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasClickListener {
 
-    private var _binding: FragmentFormUploadBerkasBinding? = null
+    private var _binding: FragmentGeneralFormUploadBerkasBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var progressLayoutDarkBinding: ProgressLayoutDarkBinding
@@ -65,7 +65,7 @@ class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasC
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentFormUploadBerkasBinding.inflate(inflater, container, false)
+        _binding = FragmentGeneralFormUploadBerkasBinding.inflate(inflater, container, false)
         progressLayoutDarkBinding = binding.progressLayout
 
         return binding.root
@@ -158,8 +158,9 @@ class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasC
                     arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
                     200
                 )
+                chooseImageGallery()
             } else {
-                chooseImageGallery();
+                chooseImageGallery()
             }
         }
         alert.show()
@@ -218,6 +219,7 @@ class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasC
     private val uploadBerkasObserver = Observer<EventLiveData<HandlerLiveData>> {
         it.getContentIfNotHandled().let { handler ->
             showUploadLoading(false)
+            showLoading(false)
             if (handler != null) {
                 if (handler.responseResult > 0) {
                     adapter.notifyItemChanged(SELECTED_POSITION_BERKAS)
@@ -230,7 +232,6 @@ class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasC
 
     private val berkasObserver = Observer<ApiResponse<ArrayList<BerkasResponse>>> { response ->
 
-        d("BERKAS_LIST", response.toString())
         when (response) {
             is ApiResponse.Success -> {
                 response.data?.let {
@@ -242,7 +243,7 @@ class FormUploadBerkasFragment : Fragment(), View.OnClickListener, UploadBerkasC
             }
             is ApiResponse.Error -> {
                 response.message?.let {
-                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
                 }
                 showLoading(false)
             }

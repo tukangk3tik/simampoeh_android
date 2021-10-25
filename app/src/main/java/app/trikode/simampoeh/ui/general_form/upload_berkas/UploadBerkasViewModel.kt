@@ -71,6 +71,7 @@ class UploadBerkasViewModel(val appRepository: IAppRepository): ViewModel() {
                         _listBerkas.postValue(ApiResponse.Success(data))
                     }
                 } else {
+                    _listBerkas.postValue(ApiResponse.Error("Fail"))
                     setFailUpload("Gagal upload berkas")
                 }
             }

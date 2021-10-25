@@ -222,4 +222,18 @@ class RemoteDataSource private constructor(private val apiService: ApiService){
             null
         }
     }
+
+    suspend fun getTagihan(): ResponsePackage? {
+        val response = apiService.getTagihan()
+        return if (response.isSuccessful) {
+            val body = response.body()
+            var responsePackage: ResponsePackage? = null
+            if (body != null) {
+                responsePackage = JsonResponseHelper.getResponse(body)
+            }
+            responsePackage
+        } else {
+            null
+        }
+    }
 }

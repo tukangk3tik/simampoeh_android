@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import app.trikode.simampoeh.R
 import app.trikode.simampoeh.core.data.source.remote.response.TujuanKirim
 import app.trikode.simampoeh.core.ui.ViewModelFactory
-import app.trikode.simampoeh.databinding.FragmentTujuanKirimBinding
+import app.trikode.simampoeh.databinding.FragmentGeneralTujuanKirimBinding
 import app.trikode.simampoeh.ui.general_form.upload_berkas.FormUploadBerkasFragment
 import app.trikode.simampoeh.ui.utils.SearchViewModel
 import app.trikode.simampoeh.ui.utils.option.OptionMenuActivity
@@ -28,7 +28,7 @@ import app.trikode.simampoeh.utils.session.SessionHelper
  */
 class FormTujuanKirimFragment : Fragment(), View.OnClickListener {
 
-    private var _binding: FragmentTujuanKirimBinding? = null
+    private var _binding: FragmentGeneralTujuanKirimBinding? = null
     private val binding get() = _binding!!
 
     private val tujuanKirimViewModel: FormTujuanKirimViewModel by activityViewModels()
@@ -45,7 +45,7 @@ class FormTujuanKirimFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentTujuanKirimBinding.inflate(inflater, container, false)
+        _binding = FragmentGeneralTujuanKirimBinding.inflate(inflater, container, false)
         return binding.root
     }
 

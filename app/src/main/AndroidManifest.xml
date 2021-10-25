@@ -17,84 +17,93 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/launcher_rounded_98px"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.SibisaApp.NoActionBar"
         tools:targetApi="n">
         <activity
-            android:name="app.trikode.simampoeh.ui.tagihan.TagihanActivity"
+            android:name=".ui.tagihan.TagihanDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tagihan_detail"
+            android:theme="@style/Theme.SibisaApp.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".ui.layanan_syarat.LayananSyaratActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.pengajuan.detail.PengajuanDetailActivity"
+            android:name=".ui.tagihan.TagihanActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.utils.option.OptionMenuActivity"
+            android:name=".ui.pengajuan.detail.PengajuanDetailActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.utils.option.OptionWilayahActivity"
+            android:name=".ui.utils.option.OptionMenuActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.cek_layanan.CekLayananActivity"
+            android:name=".ui.utils.option.OptionWilayahActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.kk.tambah.form.data_anggota.tambah.TambahAnggotaKkActivity"
+            android:name=".ui.cek_layanan.CekLayananActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.kk.tambah.TambahKkActivity"
+            android:name=".ui.kk.tambah.form.data_anggota.tambah.TambahAnggotaKkActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.kk.KkActivity"
+            android:name=".ui.kk.tambah.TambahKkActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.surat_pindah.tambah.TambahSuratPindahActivity"
+            android:name=".ui.kk.KkActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.surat_pindah.SuratPindahActivity"
+            android:name=".ui.surat_pindah.tambah.TambahSuratPindahActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_kematian.tambah.TambahAktaKematianActivity"
+            android:name=".ui.surat_pindah.SuratPindahActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_kematian.AktaKematianActivity"
+            android:name=".ui.akta_kematian.tambah.TambahAktaKematianActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.kia.tambah.TambahKiaActivity"
+            android:name=".ui.akta_kematian.AktaKematianActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.kia.KiaActivity"
+            android:name=".ui.kia.tambah.TambahKiaActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_perkawinan.tambah.TambahAktaPerkawinanActivity"
+            android:name=".ui.kia.KiaActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_perkawinan.AktaPerkawinanActivity"
+            android:name=".ui.akta_perkawinan.tambah.TambahAktaPerkawinanActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengangkatan_anak.tambah.TambahAktaPengangkatanAnakActivity"
+            android:name=".ui.akta_perkawinan.AktaPerkawinanActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengangkatan_anak.AktaPengangkatanAnakActivity"
+            android:name=".ui.akta_pengangkatan_anak.tambah.TambahAktaPengangkatanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengesahan_anak.tambah.TambahAktaPengesahanAnakActivity"
+            android:name=".ui.akta_pengangkatan_anak.AktaPengangkatanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengesahan_anak.AktaPengesahanAnakActivity"
+            android:name=".ui.akta_pengesahan_anak.tambah.TambahAktaPengesahanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengakuan_anak.tambah.TambahAktaPengakuanAnakActivity"
+            android:name=".ui.akta_pengesahan_anak.AktaPengesahanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_pengakuan_anak.AktaPengakuanAnakActivity"
+            android:name=".ui.akta_pengakuan_anak.tambah.TambahAktaPengakuanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.ktp.tambah.TambahKtpActivity"
+            android:name=".ui.akta_pengakuan_anak.AktaPengakuanAnakActivity"
             android:exported="true" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_lahir.AktaLahirActivity"
+            android:name=".ui.ktp.tambah.TambahKtpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.akta_lahir.AktaLahirActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar" />
         <activity
-            android:name="app.trikode.simampoeh.ui.akta_lahir.tambah.TambahAktaLahirActivity"
+            android:name=".ui.akta_lahir.tambah.TambahAktaLahirActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar">
@@ -107,22 +116,22 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="app.trikode.simampoeh.ui.menu_lainnya.MenuLainnyaActivity"
+            android:name=".ui.menu_lainnya.MenuLainnyaActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar" />
         <activity
-            android:name="app.trikode.simampoeh.ui.lupa_password.LupaPasswordActivity"
+            android:name=".ui.lupa_password.LupaPasswordActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar" />
         <activity
-            android:name="app.trikode.simampoeh.ui.register.RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar" />
         <activity
-            android:name="app.trikode.simampoeh.ui.login.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar">
@@ -135,7 +144,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="app.trikode.simampoeh.ui.SplashScreenActivity"
+            android:name=".ui.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.SplashScreen">
@@ -146,17 +155,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="app.trikode.simampoeh.ui.main_non_login.MainNonLoginActivity"
+            android:name=".ui.main_non_login.MainNonLoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.SibisaApp.NoActionBar" />
         <activity
-            android:name="app.trikode.simampoeh.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.SibisaApp.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.SibisaApp.NoActionBar" />
     </application>
 
 </manifest>

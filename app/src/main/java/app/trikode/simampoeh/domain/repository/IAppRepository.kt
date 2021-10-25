@@ -48,4 +48,6 @@ interface IAppRepository {
     suspend fun submitLayanan(request: String, data: String): ResponsePackage?
 
     suspend fun getHistoryPengajuan(): ResponsePackage?
+
+    suspend fun getTagihan(): ResponsePackage?
 }

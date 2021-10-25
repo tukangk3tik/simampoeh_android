@@ -4,6 +4,7 @@ import app.trikode.simampoeh.core.data.source.remote.response.ResponsePackage
 import app.trikode.simampoeh.core.data.source.remote.response.kk.AnggotaKeluargaResponse
 import app.trikode.simampoeh.core.data.source.remote.response.list_pengajuan.PengajuanResponse
 import app.trikode.simampoeh.domain.model.option.OptionMenu
+import app.trikode.simampoeh.domain.model.tagihan.Tagihan
 import app.trikode.simampoeh.domain.model.upload_berkas.BerkasResponse
 import app.trikode.simampoeh.domain.model.user.KartuKeluarga
 import app.trikode.simampoeh.domain.model.user.Penduduk
@@ -58,6 +59,38 @@ object JsonResponseHelper {
                     val option = OptionMenu(id, opsi)
 
                     result.add(option)
+                }
+            }
+        } catch (e: JsonSyntaxException) {
+            e.printStackTrace()
+        }
+
+        return result
+    }
+
+    fun tagihanResponseToDomain(response: JsonArray): ArrayList<Tagihan> {
+        val result = ArrayList<Tagihan>()
+
+        try {
+            if (response.size() > 0) {
+                for (i in 0 until response.size()) {
+                    val data = response[i].asJsonObject
+
+                    val id = data.get("id").asString
+                    val uid = data.get("uid").asString
+                    val noSts = data.get("no_sts").asString
+                    val jatuhTempo = data.get("jatuh_tempo").asString
+                    val namaJenis = data.get("nama_jenis").asString
+
+                    val tagihan = Tagihan(
+                        id,
+                        uid,
+                        noSts,
+                        jatuhTempo,
+                        namaJenis
+                    )
+
+                    result.add(tagihan)
                 }
             }
         } catch (e: JsonSyntaxException) {

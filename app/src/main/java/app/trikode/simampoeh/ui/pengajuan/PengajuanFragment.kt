@@ -47,6 +47,7 @@ class PengajuanFragment : Fragment(), PengajuanListClickListener {
         binding.rvPengajuan.layoutManager = LinearLayoutManager(view.context)
         binding.rvPengajuan.adapter = adapter
 
+        isLoading(true)
         pengajuanViewModel.setListPengajuan()
         pengajuanViewModel.listPengajuan.observe(viewLifecycleOwner, { response ->
             when (response) {
@@ -54,13 +55,12 @@ class PengajuanFragment : Fragment(), PengajuanListClickListener {
                     response.data?.let {
                         if (it.size > 0){
                             adapter.setList(it)
-                            isLoading(false)
                             isEmpty(false)
                         } else {
-                            isLoading(false)
                             isEmpty(true)
                         }
                     }
+                    isLoading(false)
                 }
                 is ApiResponse.Error -> {
                     response.message?.let {
@@ -72,6 +72,10 @@ class PengajuanFragment : Fragment(), PengajuanListClickListener {
                 is ApiResponse.Loading -> isLoading(true)
             }
         })
+
+        binding.srPengajuan.setOnRefreshListener {
+            pengajuanViewModel.setListPengajuan()
+        }
     }
 
     override fun onItemClicked(view: View, pengajuanResponse: PengajuanResponse) {
@@ -97,11 +101,12 @@ class PengajuanFragment : Fragment(), PengajuanListClickListener {
 
     fun isLoading(state: Boolean) {
         if (state) {
-            binding.progressBar.visibility = View.VISIBLE
+            binding.srPengajuan.isRefreshing = true
+            //binding.progressBar.visibility = View.VISIBLE
             binding.rvPengajuan.visibility = View.GONE
             binding.viewPengajuanKosong.visibility = View.GONE
         } else {
-            binding.progressBar.visibility = View.GONE
+            binding.srPengajuan.isRefreshing = false
         }
     }
 

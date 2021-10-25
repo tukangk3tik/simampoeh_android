@@ -80,6 +80,10 @@ class AppRepository private constructor(
         return remoteDataSource.getHistoryPengajuan()
     }
 
+    override suspend fun getTagihan(): ResponsePackage? {
+        return remoteDataSource.getTagihan()
+    }
+
     override suspend fun cekNik(nik: String): ResponsePackage? {
         return remoteDataSource.cekNik(nik)
     }

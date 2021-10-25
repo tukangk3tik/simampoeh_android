@@ -2,8 +2,8 @@ package app.trikode.simampoeh.ui.pengajuan.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import app.trikode.simampoeh.BuildConfig
 import app.trikode.simampoeh.databinding.ActivityPengajuanDetailBinding
-import app.trikode.simampoeh.utils.general.StringConfig
 
 class PengajuanDetailActivity : AppCompatActivity() {
 
@@ -17,7 +17,7 @@ class PengajuanDetailActivity : AppCompatActivity() {
 
         val uid = intent?.getStringExtra(UID_PENGAJUAN)
         if (uid != null){
-            val url = "${StringConfig.STAGING_URL}webview_mobile/detail-pengajuan-$uid"
+            val url = "${BuildConfig.STAGING_URL}webview_mobile/detail-pengajuan-$uid"
             binding.wvDetail.loadUrl(url)
         }
 

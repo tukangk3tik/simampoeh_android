@@ -4,14 +4,15 @@ buildscript {
     ext.retrofit_version = "2.9.0"
     ext.rxjava_version = "2.2.19"
     ext.rxandroid_version = "2.1.1"
-    ext.lifecycle_version = "2.2.0"
+    ext.lifecycle_version = "2.3.1"
+    ext.room_version = "2.3.0"
 
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.0"
+        classpath "com.android.tools.build:gradle:7.0.3"
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
 
         // NOTE: Do not place your application dependencies here; they belong

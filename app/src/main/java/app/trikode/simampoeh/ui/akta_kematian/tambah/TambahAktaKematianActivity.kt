@@ -17,4 +17,8 @@ class TambahAktaKematianActivity : AppCompatActivity() {
                 .commitNow()
         }
     }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
 }

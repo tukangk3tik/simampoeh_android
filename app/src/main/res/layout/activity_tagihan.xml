@@ -46,19 +46,42 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:visibility="gone"
-        android:layout_marginTop="60dp"
-        android:id="@+id/rv_pengajuan"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/tagihan_swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginHorizontal="5dp"
-        android:scrollbars="none"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:listitem="@layout/item_list_pengajuan"
-        tools:itemCount="4"
-        />
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_marginTop="60dp"
+            android:id="@+id/rv_tagihan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_list_pengajuan"
+            tools:itemCount="4"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:id="@+id/rv_tagihan"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginHorizontal="5dp"-->
+<!--        android:scrollbars="none"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--        tools:listitem="@layout/item_list_pengajuan"-->
+<!--        tools:itemCount="4"-->
+<!--        />-->
 
     <androidx.appcompat.widget.LinearLayoutCompat
         app:layout_constraintTop_toBottomOf="@id/title_bar"
@@ -84,15 +107,15 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <ProgressBar
-        android:visibility="gone"
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+<!--    <ProgressBar-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/progress_bar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

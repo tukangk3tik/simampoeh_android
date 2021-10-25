@@ -9,6 +9,7 @@ data class Menu(
     var nameStrRes : Int,
     var imageIcon : Int,
     var route : String,
+    var urlString: String?,
     var parent : Int? = null,
     var child: List<Menu>? = null
 ) : Parcelable

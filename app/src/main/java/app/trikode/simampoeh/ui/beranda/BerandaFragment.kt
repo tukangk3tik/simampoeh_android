@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import app.trikode.simampoeh.databinding.FragmentBerandaBinding
 import app.trikode.simampoeh.domain.model.informasi.Informasi
 import app.trikode.simampoeh.domain.model.menu.Menu
+import app.trikode.simampoeh.ui.menu_lainnya.MenuLainnyaActivity
 import app.trikode.simampoeh.ui.tagihan.TagihanActivity
 import app.trikode.simampoeh.ui.utils.adapter.InformasiListAdapter
 import app.trikode.simampoeh.ui.utils.adapter.MenuGridAdapter
@@ -20,7 +21,7 @@ import app.trikode.simampoeh.utils.click_listener.menu.MenuClickListener
 import app.trikode.simampoeh.utils.routing.LayananRoutes
 import app.trikode.simampoeh.utils.session.SessionHelper
 
-class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener, InformasiClickListener {
+class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener {
 
     private lateinit var berandaViewModel: BerandaViewModel
     private var _binding: FragmentBerandaBinding? = null
@@ -56,7 +57,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener, Inf
             }
         })
 
-        val informasiAdapter = InformasiListAdapter()
+       /* val informasiAdapter = InformasiListAdapter()
         informasiAdapter.listener = this
         binding.rvInformasi.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvInformasi.adapter = informasiAdapter
@@ -65,13 +66,14 @@ class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener, Inf
             if (it.isNotEmpty()){
                 informasiAdapter.setInfo(it)
             }
-        })
+        })*/
 
         val userData = SessionHelper.getSession(view.context)
         binding.tvNamaUser.text = userData.nama
         binding.tvNik.text = userData.nik
 
         binding.btnTagihan.setOnClickListener(this)
+        binding.btnSyarat.setOnClickListener(this)
     }
 
     override fun onDestroyView() {
@@ -85,12 +87,9 @@ class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener, Inf
 
         if (destination != null) {
             val mIntent = Intent(binding.root.context, destination)
+            if (menu.id == 99) mIntent.putExtra(MenuLainnyaActivity.STATUS_ROUTING, "TRUE")
             startActivity(mIntent)
         }
-    }
-
-    override fun onInformasiItemClicked(view: View, informasi: Informasi) {
-
     }
 
     override fun onClick(v: View) {
@@ -98,6 +97,16 @@ class BerandaFragment : Fragment(), View.OnClickListener, MenuClickListener, Inf
             binding.btnTagihan.id -> {
                 val mIntent = Intent(requireContext(), TagihanActivity::class.java)
                 startActivity(mIntent)
+            }
+            binding.btnSyarat.id -> {
+                appRoutes.setDestination("menu_lainnya")
+                val destination = appRoutes.getRoute()
+
+                if (destination != null) {
+                    val mIntent = Intent(binding.root.context, destination)
+                    mIntent.putExtra(MenuLainnyaActivity.STATUS_ROUTING, "FALSE")
+                    startActivity(mIntent)
+                }
             }
         }
     }

@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import app.trikode.simampoeh.R
-import app.trikode.simampoeh.databinding.FragmentFormCekLayananBinding
+import app.trikode.simampoeh.databinding.FragmentCekLayananFormBinding
 import app.trikode.simampoeh.utils.general.GeneralUtils
 
 class FormCekLayananFragment : Fragment() {
 
-    private var _binding: FragmentFormCekLayananBinding? = null
+    private var _binding: FragmentCekLayananFormBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class FormCekLayananFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        _binding = FragmentFormCekLayananBinding.inflate(inflater, container, false)
+        _binding = FragmentCekLayananFormBinding.inflate(inflater, container, false)
         return binding.root
     }
 

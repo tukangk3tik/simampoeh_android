@@ -10,6 +10,7 @@ import app.trikode.simampoeh.ui.login.LoginViewModel
 import app.trikode.simampoeh.ui.lupa_password.LupaPasswordViewModel
 import app.trikode.simampoeh.ui.pengajuan.PengajuanViewModel
 import app.trikode.simampoeh.ui.register.RegisterViewModel
+import app.trikode.simampoeh.ui.tagihan.TagihanViewModel
 import app.trikode.simampoeh.ui.utils.KirimLayananViewModel
 import app.trikode.simampoeh.ui.utils.SearchViewModel
 import app.trikode.simampoeh.ui.utils.option.OptionMenuViewModel
@@ -53,6 +54,9 @@ class ViewModelFactory private constructor(private val appRepository: IAppReposi
             }
             modelClass.isAssignableFrom(PengajuanViewModel::class.java) -> {
                 PengajuanViewModel(appRepository) as T
+            }
+            modelClass.isAssignableFrom(TagihanViewModel::class.java) -> {
+                TagihanViewModel(appRepository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }
